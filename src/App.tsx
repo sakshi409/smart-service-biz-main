@@ -8,6 +8,8 @@ import Login from "./pages/Login";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
 import Profile from "./pages/Profile";
+import AdminDashboard from "./pages/AdminDashboard"; // NEW
+import ProviderDashboard from "./pages/ProviderDashboard"; // NEW
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,7 +27,10 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/service/:id" element={<ServiceDetail />} />
           <Route path="/profile" element={<Profile />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* NEW: Dashboard routes */}
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route path="/provider-dashboard" element={<ProviderDashboard />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
